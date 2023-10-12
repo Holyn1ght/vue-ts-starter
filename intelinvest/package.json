@@ -13,7 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "gulp",
     "server": "json-server --watch db.json --port 3004",
-    "webpack-dev-server": "webpack-dev-server", 
+    "webpack-dev-server": "webpack-dev-server --open=false", 
     "all": "npm-run-all --parallel gulp server webpack-dev-server"
   },
   "keywords": [],
