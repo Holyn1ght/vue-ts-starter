@@ -4,8 +4,13 @@ import Vuetify from "vuetify";
 Vue.use(Vuetify);
 
 export default new Vuetify({
-    light: true,
+    theme: {
+        dark: false
+    },
     lang: {
-        current: "ru"
-    }
+        current: "en"
+    },
+    
 });
+
+

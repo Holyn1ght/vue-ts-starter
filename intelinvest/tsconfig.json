@@ -21,7 +21,7 @@
     "emitDecoratorMetadata": true,
     "preserveConstEnums": true,
     //        "noResolve": true,
-    "strictNullChecks": false
+    "strictNullChecks": false,
   },
   "include": [
     "./src/**/*",
