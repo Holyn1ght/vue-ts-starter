@@ -73,8 +73,10 @@ export class EventsPage extends UI {
 
   // Метод для перехода на страницу с деталями события
   goToEventDetail(row: any, event: Event): void {
+    const rowIndex: number = this.events.indexOf(row);
     this.$router.push({
       name: "eventDetail",
+      params: { index: rowIndex.toString() },
     });
   }
 
