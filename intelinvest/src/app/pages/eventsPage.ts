@@ -12,6 +12,7 @@ import { Component, UI } from "@intelinvest/platform/src/app/ui";
         :items-per-page="10"
         item-key="id"
         show-select
+        @click:row="goToEventDetail"
       >
         <template v-slot:item.date="{ item }">{{ item.date }}</template>
         <template v-slot:item.totalAmount="{ item }">{{
@@ -68,6 +69,13 @@ export class EventsPage extends UI {
     return Object.entries(totals)
       .map(([type, total]) => `${type}: USD ${total.toFixed(2)}`)
       .join(", ");
+  }
+
+  // Метод для перехода на страницу с деталями события
+  goToEventDetail(row: any, event: Event): void {
+    this.$router.push({
+      name: "eventDetail",
+    });
   }
 
   async created(): Promise<void> {
